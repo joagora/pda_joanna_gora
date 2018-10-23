@@ -22,6 +22,7 @@ class CardGame
 
 #spelling mistake in the word def
 #indentation is incorrect, which decreases readability
+#missing comma in parameters
   dif highest_card(card1 card2)
   if card1.value > card2.value
     #the card variable is not declared
