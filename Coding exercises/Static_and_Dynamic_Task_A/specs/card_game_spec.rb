@@ -29,5 +29,12 @@ class TestCardGame < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_can_calculate_total
+    expected = "You have a total of 8"
+    actual = CardGame.cards_total([@fiveOfSpades, @threeOfSpades])
+    assert_equal(expected, actual)
+  end
+
+
 
 end
