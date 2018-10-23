@@ -8,6 +8,7 @@ class TestCardGame < MiniTest::Test
     @cardGame = CardGame.new()
     @threeOfSpades = Card.new("Ace", "3")
     @aceOfHearts = Card.new("Hearts", "Ace")
+    @fiveOfSpades = Card.new("Spades", "5")
   end
 
   def test_card_is_ace
@@ -22,8 +23,11 @@ class TestCardGame < MiniTest::Test
     assert_equal(expected, actual)
   end
 
-
-
+  def test_can_get_highest_card
+    expected = @fiveOfSpades
+    actual = @cardGame.highest_card(@threeOfSpades, @fiveOfSpades)
+    assert_equal(expected, actual)
+  end
 
 
 end
