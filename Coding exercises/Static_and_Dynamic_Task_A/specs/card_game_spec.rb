@@ -6,12 +6,19 @@ class TestCardGame < MiniTest::Test
 
   def setup
     @cardGame = CardGame.new()
-    @aceOfTwo = Card.new("Ace", 2)
+    @threeOfSpades = Card.new("Ace", "3")
+    @aceOfHearts = Card.new("Hearts", "Ace")
   end
 
   def test_card_is_ace
     expected = true
-    actual = @cardGame.checkForAce(@aceOfTwo)
+    actual = @cardGame.checkForAce(@aceOfHearts)
+    assert_equal(expected, actual)
+  end
+
+  def test_card_is_not_ace
+    expected = false
+    actual = @cardGame.checkForAce(@threeOfSpades)
     assert_equal(expected, actual)
   end
 

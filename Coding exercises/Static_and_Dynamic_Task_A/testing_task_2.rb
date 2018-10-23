@@ -8,7 +8,7 @@ class CardGame
 
 
   def checkForAce(card)
-    if card.suit == "Ace"
+    if card.value == "Ace"
       return true
     else
       return false
